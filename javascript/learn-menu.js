@@ -246,7 +246,7 @@ function loadCategory(category){
                 if(module.initialWorkflow){
                     app.loadGraphData(JSON.parse(module.initialWorkflow))
                 }
-                if(module.type === 'video') {
+                if(module.type === 'lesson') {
                     const keyframesFunctions = {}
                     if(module.keyframesWorkflows){
                         for (let keyframe in module.keyframesWorkflows) {
