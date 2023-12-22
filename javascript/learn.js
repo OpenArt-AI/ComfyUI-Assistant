@@ -1,5 +1,9 @@
 import { app } from "../../scripts/app.js";
 import {LearnModal} from './learn-menu.js'
+import {latestVersion} from "./data.js";
+
+
+const localVersion = 0;
 
 
 var docStyle = document.createElement('style');
@@ -35,6 +39,9 @@ const ext = {
 			})
 		}
 		learnBtn.addEventListener("click", ()=>{
+			if(latestVersion>localVersion){
+				alert("You are using an old version of the plugin, update it to get the latest features")
+			}
 			LearnModal.get().show();
 		})
 		menuLoadDefault.after(learnBtn);
