@@ -3,7 +3,7 @@ import {LearnModal} from './learn-menu.js'
 import {latestVersion} from "./data.js";
 
 
-const localVersion = 0;
+const localVersion = 1;
 
 
 var docStyle = document.createElement('style');
