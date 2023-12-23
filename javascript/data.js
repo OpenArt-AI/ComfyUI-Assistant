@@ -3,7 +3,7 @@ export const CATEGORY_TEMPLATE="Templates"
 export const categories = [CATEGORY_COMFY_ACADEMY, CATEGORY_TEMPLATE]
 export const latestVersion = 1;
 export const modules = [
-    // Academy
+    // Comfy Academy
     {
         title:"ComfyUI Intro",
         type:'lesson',
