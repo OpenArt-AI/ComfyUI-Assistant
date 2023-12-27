@@ -7,7 +7,8 @@ from zipfile import ZipFile
 import requests
 
 WEB_DIRECTORY = 'javascript'
-
+NODE_CLASS_MAPPINGS = {}
+NODE_DISPLAY_NAME_MAPPINGS = {}
 github_repo_url = "https://github.com/OpenArt-AI/ComfyUI-Assistant"
 zip_url = f"{github_repo_url}/archive/main.zip"
 
