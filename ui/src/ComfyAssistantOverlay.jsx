@@ -8,20 +8,21 @@ const ComfyAssistantOverlay = () => {
     const [video,setVideo] = useState(null)
     window.onLearnClick = () => {
         setIsOpen(true)
+        setVideo(null)
     }
 
 
     return (
             <Dialog
                 open={isOpen}
-                onClose={() => setIsOpen(false)}
                 className="relative z-50"
+                onClose={() => {}}
             >
                 {!video && <LearnDialog close={()=>setIsOpen(false)} startVideo={(video) => setVideo(video)}/>}
                 {video && <YoutubePlayer videoId={'BT2Kpm1cU-w'} close={()=> {
                     setIsOpen(false)
                     setVideo(null)
-                }} />}
+                }} video={video} />}
             </Dialog>
     );
 };

@@ -100,6 +100,10 @@ docStyle.innerHTML = `*, ::before, ::after {
   --tw-backdrop-sepia:  
 }
 
+.visible {
+  visibility: visible
+}
+
 .fixed {
   position: fixed
 }
@@ -136,8 +140,20 @@ docStyle.innerHTML = `*, ::before, ::after {
   display: flex
 }
 
+.hidden {
+  display: none
+}
+
 .h-8 {
   height: 2rem
+}
+
+.h-0 {
+  height: 0px
+}
+
+.h-auto {
+  height: auto
 }
 
 .max-h-96 {
@@ -163,6 +179,10 @@ docStyle.innerHTML = `*, ::before, ::after {
 
 .max-w-4xl {
   max-width: 56rem
+}
+
+.flex-grow {
+  flex-grow: 1
 }
 
 .cursor-pointer {
@@ -251,6 +271,10 @@ docStyle.innerHTML = `*, ::before, ::after {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem
+}
+
+.text-center {
+  text-align: center
 }
 
 .text-2xl {

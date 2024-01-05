@@ -26344,8 +26344,8 @@
             var player = maybeElementId;
             resolve(player);
           } else {
-            youtubeIframeAPI.then(function(YT) {
-              var player2 = new YT.Player(maybeElementId, options);
+            youtubeIframeAPI.then(function(YT2) {
+              var player2 = new YT2.Player(maybeElementId, options);
               emitter.on("ready", function() {
                 resolve(player2);
               });
@@ -27842,26 +27842,36 @@
 
   // src/YoutubePlayer.jsx
   var import_react_draggable2 = __toESM(require_cjs());
-  function YoutubePlayer({ videoId, close, keyframesFunctions }) {
+  function YoutubePlayer({ videoId, close, video }) {
     const playerStateRef = (0, import_react28.useRef)(-1);
     const playerRef = (0, import_react28.useRef)(null);
+    const [isMinified, setIsMinified] = (0, import_react28.useState)(false);
     const onPlayerStateChange = (event) => {
       playerRef.current = event.target;
       playerStateRef.current = event.data;
     };
     (0, import_react28.useEffect)(() => {
       const lastInterval = setInterval(function() {
-        const currentTime = playerRef.current.getCurrentTime();
-        const timeInSeconds = Math.floor(currentTime);
-        if (keyframesFunctions[timeInSeconds]) {
-          keyframesFunctions[timeInSeconds]();
+        if (playerStateRef.current === YT.PlayerState.PLAYING) {
+          const currentTime = playerRef.current.getCurrentTime();
+          const timeInSeconds = Math.floor(currentTime);
+          if (video.keyframesFunctions[timeInSeconds]) {
+            video.keyframesFunctions[timeInSeconds]();
+          }
         }
       }, 1e3);
       return () => {
         clearInterval(lastInterval);
       };
     }, []);
-    return /* @__PURE__ */ import_react28.default.createElement(import_react_draggable2.default, null, /* @__PURE__ */ import_react28.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react28.default.createElement(_t.Panel, { className: "w-fit max-w-4xl rounded-xl bg-comfy-light relative" }, /* @__PURE__ */ import_react28.default.createElement("div", { className: "flex flex-row items-center font-semibold w-full bg-gray-500 top-0 left-0 h-8 rounded-t-xl" }, /* @__PURE__ */ import_react28.default.createElement("span", { className: "cursor-pointer px-2", onClick: close }, "X")), /* @__PURE__ */ import_react28.default.createElement("div", { className: "" }, /* @__PURE__ */ import_react28.default.createElement(YouTube_default, { videoId, onPlayerStateChange })))));
+    return /* @__PURE__ */ import_react28.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react28.default.createElement(import_react_draggable2.default, null, /* @__PURE__ */ import_react28.default.createElement(_t.Panel, { className: "w-fit max-w-4xl rounded-xl bg-comfy-light relative" }, /* @__PURE__ */ import_react28.default.createElement("div", { className: "flex flex-row items-center font-semibold w-full bg-gray-500 top-0 left-0 h-8 rounded-t-xl" }, /* @__PURE__ */ import_react28.default.createElement("div", null, /* @__PURE__ */ import_react28.default.createElement("span", { className: "cursor-pointer px-2", onClick: close }, "X"), /* @__PURE__ */ import_react28.default.createElement(
+      "span",
+      {
+        className: "cursor-pointer px-2",
+        onClick: () => setIsMinified(!isMinified)
+      },
+      "-"
+    )), /* @__PURE__ */ import_react28.default.createElement("div", { className: "flex-grow text-center px-4" }, video.title)), /* @__PURE__ */ import_react28.default.createElement("div", { className: isMinified ? "hidden" : "visible" }, /* @__PURE__ */ import_react28.default.createElement(YouTube_default, { videoId, onStateChange: onPlayerStateChange })))));
   }
   var YoutubePlayer_default = YoutubePlayer;
 
@@ -27871,19 +27881,21 @@
     const [video, setVideo] = (0, import_react30.useState)(null);
     window.onLearnClick = () => {
       setIsOpen(true);
+      setVideo(null);
     };
     return /* @__PURE__ */ import_react30.default.createElement(
       _t,
       {
         open: isOpen,
-        onClose: () => setIsOpen(false),
-        className: "relative z-50"
+        className: "relative z-50",
+        onClose: () => {
+        }
       },
       !video && /* @__PURE__ */ import_react30.default.createElement(LearnDialog_default, { close: () => setIsOpen(false), startVideo: (video2) => setVideo(video2) }),
       video && /* @__PURE__ */ import_react30.default.createElement(YoutubePlayer_default, { videoId: "BT2Kpm1cU-w", close: () => {
         setIsOpen(false);
         setVideo(null);
-      } })
+      }, video })
     );
   };
   var ComfyAssistantOverlay_default = ComfyAssistantOverlay;
