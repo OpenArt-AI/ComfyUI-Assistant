@@ -1,0 +1,25 @@
+{
+  "name": "ui",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:esbuild": "esbuild src/index.jsx --bundle --outfile=../javascript/out.js --loader:.png=dataurl",
+    "build:css": "npx tailwindcss -i ./src/global.css -o ../javascript/global.css --minify",
+    "build": "npm-run-all --parallel build:*",
+    "watch:esbuild": "esbuild src/index.jsx --bundle --watch --outfile=../javascript/out.js --loader:.png=dataurl",
+    "watch:css": "npx tailwindcss -i  ./src/global.css -o ../javascript/global.css --watch",
+    "dev": "npm-run-all --parallel watch:*"
+  },
+  "devDependencies": {
+    "esbuild": "0.19.11",
+    "tailwindcss": "^3.4.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.6",
+    "react-youtube": "^10.1.0"
+  }
+}
