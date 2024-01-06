@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react'
-import logo from './logo.png';
 import LearnDialog from "./LearnDialog";
 import YoutubePlayer from "./YoutubePlayer";
+import SearchComponent from "./SearchComponent";
 const ComfyAssistantOverlay = () => {
     const [isOpen,setIsOpen] = useState(false)
     const [video,setVideo] = useState(null)
@@ -12,7 +12,10 @@ const ComfyAssistantOverlay = () => {
     }
 
 
+
+
     return (
+        <>
             <Dialog
                 open={isOpen}
                 className="relative z-50"
@@ -24,6 +27,8 @@ const ComfyAssistantOverlay = () => {
                     setVideo(null)
                 }} video={video} />}
             </Dialog>
+            <SearchComponent/>
+        </>
     );
 };
 

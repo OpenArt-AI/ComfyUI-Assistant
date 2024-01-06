@@ -120,12 +120,28 @@ docStyle.innerHTML = `*, ::before, ::after {
   inset: 0px
 }
 
+.bottom-3 {
+  bottom: 0.75rem
+}
+
 .left-0 {
   left: 0px
 }
 
 .top-0 {
   top: 0px
+}
+
+.right-0 {
+  right: 0px
+}
+
+.bottom-6 {
+  bottom: 1.5rem
+}
+
+.bottom-4 {
+  bottom: 1rem
 }
 
 .z-50 {
@@ -148,12 +164,16 @@ docStyle.innerHTML = `*, ::before, ::after {
   height: 2rem
 }
 
-.h-0 {
-  height: 0px
+.h-6 {
+  height: 1.5rem
 }
 
-.h-auto {
-  height: auto
+.h-12 {
+  height: 3rem
+}
+
+.h-10 {
+  height: 2.5rem
 }
 
 .max-h-96 {
@@ -177,12 +197,58 @@ docStyle.innerHTML = `*, ::before, ::after {
   width: 100vw
 }
 
+.w-16 {
+  width: 4rem
+}
+
+.w-10 {
+  width: 2.5rem
+}
+
+.w-8 {
+  width: 2rem
+}
+
+.w-1 {
+  width: 0.25rem
+}
+
+.w-6 {
+  width: 1.5rem
+}
+
+.w-7 {
+  width: 1.75rem
+}
+
+.w-12 {
+  width: 3rem
+}
+
 .max-w-4xl {
   max-width: 56rem
 }
 
+.max-w-7xl {
+  max-width: 80rem
+}
+
+.max-w-5xl {
+  max-width: 64rem
+}
+
 .flex-grow {
   flex-grow: 1
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite
 }
 
 .cursor-pointer {
@@ -203,6 +269,10 @@ docStyle.innerHTML = `*, ::before, ::after {
 
 .justify-center {
   justify-content: center
+}
+
+.justify-between {
+  justify-content: space-between
 }
 
 .justify-around {
@@ -229,9 +299,25 @@ docStyle.innerHTML = `*, ::before, ::after {
   border-radius: 0.75rem
 }
 
+.rounded-full {
+  border-radius: 9999px
+}
+
+.rounded {
+  border-radius: 0.25rem
+}
+
 .rounded-t-xl {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem
+}
+
+.border {
+  border-width: 1px
+}
+
+.border-none {
+  border-style: none
 }
 
 .bg-comfy-light {
@@ -242,6 +328,16 @@ docStyle.innerHTML = `*, ::before, ::after {
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity))
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+
+.bg-comfy-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 34 34 / var(--tw-bg-opacity))
 }
 
 .object-cover {
@@ -292,6 +388,11 @@ docStyle.innerHTML = `*, ::before, ::after {
   line-height: 1rem
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}
+
 .font-semibold {
   font-weight: 600
 }
@@ -301,12 +402,77 @@ docStyle.innerHTML = `*, ::before, ::after {
   color: rgb(209 213 219 / var(--tw-text-opacity))
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity))
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
 .underline {
   text-decoration-line: underline
 }
 
+.no-underline {
+  text-decoration-line: none
+}
+
+.opacity-0 {
+  opacity: 0
+}
+
+.opacity-100 {
+  opacity: 1
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px
+}
+
+.outline-0 {
+  outline-width: 0px
+}
+
+.ring-0 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}
+
+.duration-300 {
+  transition-duration: 300ms
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 @keyframes Gradient {

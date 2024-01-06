@@ -20,6 +20,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.6",
+    "react-feather": "^2.0.10",
     "react-youtube": "^10.1.0"
   }
 }
