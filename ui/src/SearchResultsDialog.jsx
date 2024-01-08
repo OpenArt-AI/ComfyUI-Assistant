@@ -13,7 +13,7 @@ function SearchResultsDialog({isOpen, close,data}) {
             onClose={close}
         >
         <div className="fixed inset-0 flex w-screen items-center justify-center p-2">
-            <Dialog.Panel className="w-full max-w-4xl rounded-xl bg-comfy-light px-4 relative">
+            <Dialog.Panel className="w-full max-w-4xl rounded-xl  border-white border-solid border-2 bg-comfy-light px-4 relative">
                         <span className={"font-semibold absolute top-0 left-0 m-4 cursor-pointer"}
                               onClick={close}>X</span>
 

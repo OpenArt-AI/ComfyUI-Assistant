@@ -28164,7 +28164,7 @@
         className: "relative z-50",
         onClose: close
       },
-      /* @__PURE__ */ import_react33.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react33.default.createElement(_t.Panel, { className: "w-full max-w-4xl rounded-xl bg-comfy-light px-4 relative" }, /* @__PURE__ */ import_react33.default.createElement(
+      /* @__PURE__ */ import_react33.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react33.default.createElement(_t.Panel, { className: "w-full max-w-4xl rounded-xl  border-white border-solid border-2 bg-comfy-light px-4 relative" }, /* @__PURE__ */ import_react33.default.createElement(
         "span",
         {
           className: "font-semibold absolute top-0 left-0 m-4 cursor-pointer",

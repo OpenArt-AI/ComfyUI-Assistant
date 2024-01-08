@@ -366,8 +366,21 @@ docStyle.innerHTML = `*, ::before, ::after {
   border-width: 1px
 }
 
+.border-2 {
+  border-width: 2px
+}
+
+.border-solid {
+  border-style: solid
+}
+
 .border-none {
   border-style: none
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity))
 }
 
 .bg-comfy-light {
