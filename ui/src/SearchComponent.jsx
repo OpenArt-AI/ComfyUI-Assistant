@@ -10,7 +10,7 @@ function SearchComponent() {
     const [data,setData] = useState(null)
     const search = () => {
         setLoading(true)
-        fetch(`https://openart.ai/api/workflows/list?query_type=workflow&keyword=${text}`)
+        fetch(`https://openart.ai/api/workflows/list?query_type=workflow&keyword=${text}&pagesSize=25`)
             .then(res=>res.json())
             .then((results)=> {
                 setLoading(false)
@@ -23,7 +23,7 @@ function SearchComponent() {
 
     return (
         <>
-        <div className={'bottom-4 fixed w-full flex justify-center'}>
+        <div className={'bottom-4 fixed w-full flex justify-center p-2'}>
             <div className={'w-full max-w-5xl flex'}>
                 <div
                     onClick={() => {

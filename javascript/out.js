@@ -971,7 +971,7 @@
             }
             return lazyType;
           }
-          function forwardRef3(render) {
+          function forwardRef4(render) {
             {
               if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
                 error("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
@@ -1868,7 +1868,7 @@
           exports.createElement = createElement$1;
           exports.createFactory = createFactory;
           exports.createRef = createRef;
-          exports.forwardRef = forwardRef3;
+          exports.forwardRef = forwardRef4;
           exports.isValidElement = isValidElement;
           exports.lazy = lazy;
           exports.memo = memo;
@@ -2382,9 +2382,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React10 = require_react();
+          var React11 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React10.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React11.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -3989,7 +3989,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React10.Children.forEach(props.children, function(child) {
+                  React11.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -12436,7 +12436,7 @@
             }
           }
           var fakeInternalInstance = {};
-          var emptyRefsObject = new React10.Component().refs;
+          var emptyRefsObject = new React11.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -24793,7 +24793,7 @@
         value: true
       });
       exports.default = void 0;
-      var React10 = _interopRequireWildcard(require_react());
+      var React11 = _interopRequireWildcard(require_react());
       var _propTypes = _interopRequireDefault(require_prop_types());
       var _reactDom = _interopRequireDefault(require_react_dom());
       var _domFns = require_domFns();
@@ -24879,7 +24879,7 @@
         }
       };
       var dragEventFor = eventsFor.mouse;
-      var DraggableCore = class extends React10.Component {
+      var DraggableCore = class extends React11.Component {
         constructor() {
           super(...arguments);
           _defineProperty(this, "dragging", false);
@@ -25043,7 +25043,7 @@
           return (_this$props = this.props) !== null && _this$props !== void 0 && _this$props.nodeRef ? (_this$props2 = this.props) === null || _this$props2 === void 0 || (_this$props2 = _this$props2.nodeRef) === null || _this$props2 === void 0 ? void 0 : _this$props2.current : _reactDom.default.findDOMNode(this);
         }
         render() {
-          return /* @__PURE__ */ React10.cloneElement(React10.Children.only(this.props.children), {
+          return /* @__PURE__ */ React11.cloneElement(React11.Children.only(this.props.children), {
             // Note: mouseMove handler is attached to document so it will still function
             // when the user drags quickly and leaves the bounds of the element.
             onMouseDown: this.onMouseDown,
@@ -25213,7 +25213,7 @@
         }
       });
       exports.default = void 0;
-      var React10 = _interopRequireWildcard(require_react());
+      var React11 = _interopRequireWildcard(require_react());
       var _propTypes = _interopRequireDefault(require_prop_types());
       var _reactDom = _interopRequireDefault(require_react_dom());
       var _clsx = _interopRequireDefault(require_clsx());
@@ -25263,8 +25263,8 @@
         }
         return newObj;
       }
-      function _extends3() {
-        _extends3 = Object.assign ? Object.assign.bind() : function(target) {
+      function _extends4() {
+        _extends4 = Object.assign ? Object.assign.bind() : function(target) {
           for (var i5 = 1; i5 < arguments.length; i5++) {
             var source = arguments[i5];
             for (var key in source) {
@@ -25275,7 +25275,7 @@
           }
           return target;
         };
-        return _extends3.apply(this, arguments);
+        return _extends4.apply(this, arguments);
       }
       function _defineProperty(obj, key, value) {
         key = _toPropertyKey(key);
@@ -25302,7 +25302,7 @@
         }
         return (hint === "string" ? String : Number)(input);
       }
-      var Draggable4 = class extends React10.Component {
+      var Draggable4 = class extends React11.Component {
         // React 16.3+
         // Arity (props, state)
         static getDerivedStateFromProps(_ref, _ref2) {
@@ -25468,11 +25468,11 @@
             [defaultClassNameDragging]: this.state.dragging,
             [defaultClassNameDragged]: this.state.dragged
           });
-          return /* @__PURE__ */ React10.createElement(_DraggableCore.default, _extends3({}, draggableCoreProps, {
+          return /* @__PURE__ */ React11.createElement(_DraggableCore.default, _extends4({}, draggableCoreProps, {
             onStart: this.onDragStart,
             onDrag: this.onDrag,
             onStop: this.onDragStop
-          }), /* @__PURE__ */ React10.cloneElement(React10.Children.only(children), {
+          }), /* @__PURE__ */ React11.cloneElement(React11.Children.only(children), {
             className,
             style: {
               ...children.props.style,
@@ -26363,11 +26363,11 @@
   });
 
   // src/index.jsx
-  var React9 = __toESM(require_react());
+  var React10 = __toESM(require_react());
   var ReactDOM = __toESM(require_client());
 
   // src/ComfyAssistantOverlay.jsx
-  var import_react35 = __toESM(require_react());
+  var import_react36 = __toESM(require_react());
 
   // node_modules/@headlessui/react/dist/hooks/use-iso-morphic-effect.js
   var import_react = __toESM(require_react(), 1);
@@ -27878,9 +27878,9 @@
   var YoutubePlayer_default = YoutubePlayer;
 
   // src/SearchComponent.jsx
-  var import_react34 = __toESM(require_react());
+  var import_react35 = __toESM(require_react());
 
-  // node_modules/react-feather/dist/icons/loader.js
+  // node_modules/react-feather/dist/icons/external-link.js
   var import_react30 = __toESM(require_react());
   var import_prop_types2 = __toESM(require_prop_types());
   function _extends() {
@@ -27929,7 +27929,7 @@
     }
     return target;
   }
-  var Loader = (0, import_react30.forwardRef)(function(_ref, ref) {
+  var ExternalLink = (0, import_react30.forwardRef)(function(_ref, ref) {
     var _ref$color = _ref.color, color = _ref$color === void 0 ? "currentColor" : _ref$color, _ref$size = _ref.size, size = _ref$size === void 0 ? 24 : _ref$size, rest = _objectWithoutProperties(_ref, ["color", "size"]);
     return /* @__PURE__ */ import_react30.default.createElement("svg", _extends({
       ref,
@@ -27942,56 +27942,25 @@
       strokeWidth: "2",
       strokeLinecap: "round",
       strokeLinejoin: "round"
-    }, rest), /* @__PURE__ */ import_react30.default.createElement("line", {
-      x1: "12",
-      y1: "2",
-      x2: "12",
-      y2: "6"
+    }, rest), /* @__PURE__ */ import_react30.default.createElement("path", {
+      d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+    }), /* @__PURE__ */ import_react30.default.createElement("polyline", {
+      points: "15 3 21 3 21 9"
     }), /* @__PURE__ */ import_react30.default.createElement("line", {
-      x1: "12",
-      y1: "18",
-      x2: "12",
-      y2: "22"
-    }), /* @__PURE__ */ import_react30.default.createElement("line", {
-      x1: "4.93",
-      y1: "4.93",
-      x2: "7.76",
-      y2: "7.76"
-    }), /* @__PURE__ */ import_react30.default.createElement("line", {
-      x1: "16.24",
-      y1: "16.24",
-      x2: "19.07",
-      y2: "19.07"
-    }), /* @__PURE__ */ import_react30.default.createElement("line", {
-      x1: "2",
-      y1: "12",
-      x2: "6",
-      y2: "12"
-    }), /* @__PURE__ */ import_react30.default.createElement("line", {
-      x1: "18",
-      y1: "12",
-      x2: "22",
-      y2: "12"
-    }), /* @__PURE__ */ import_react30.default.createElement("line", {
-      x1: "4.93",
-      y1: "19.07",
-      x2: "7.76",
-      y2: "16.24"
-    }), /* @__PURE__ */ import_react30.default.createElement("line", {
-      x1: "16.24",
-      y1: "7.76",
-      x2: "19.07",
-      y2: "4.93"
+      x1: "10",
+      y1: "14",
+      x2: "21",
+      y2: "3"
     }));
   });
-  Loader.propTypes = {
+  ExternalLink.propTypes = {
     color: import_prop_types2.default.string,
     size: import_prop_types2.default.oneOfType([import_prop_types2.default.string, import_prop_types2.default.number])
   };
-  Loader.displayName = "Loader";
-  var loader_default = Loader;
+  ExternalLink.displayName = "ExternalLink";
+  var external_link_default = ExternalLink;
 
-  // node_modules/react-feather/dist/icons/search.js
+  // node_modules/react-feather/dist/icons/loader.js
   var import_react31 = __toESM(require_react());
   var import_prop_types3 = __toESM(require_prop_types());
   function _extends2() {
@@ -28040,7 +28009,7 @@
     }
     return target;
   }
-  var Search = (0, import_react31.forwardRef)(function(_ref, ref) {
+  var Loader = (0, import_react31.forwardRef)(function(_ref, ref) {
     var _ref$color = _ref.color, color = _ref$color === void 0 ? "currentColor" : _ref$color, _ref$size = _ref.size, size = _ref$size === void 0 ? 24 : _ref$size, rest = _objectWithoutProperties2(_ref, ["color", "size"]);
     return /* @__PURE__ */ import_react31.default.createElement("svg", _extends2({
       ref,
@@ -28053,11 +28022,122 @@
       strokeWidth: "2",
       strokeLinecap: "round",
       strokeLinejoin: "round"
-    }, rest), /* @__PURE__ */ import_react31.default.createElement("circle", {
+    }, rest), /* @__PURE__ */ import_react31.default.createElement("line", {
+      x1: "12",
+      y1: "2",
+      x2: "12",
+      y2: "6"
+    }), /* @__PURE__ */ import_react31.default.createElement("line", {
+      x1: "12",
+      y1: "18",
+      x2: "12",
+      y2: "22"
+    }), /* @__PURE__ */ import_react31.default.createElement("line", {
+      x1: "4.93",
+      y1: "4.93",
+      x2: "7.76",
+      y2: "7.76"
+    }), /* @__PURE__ */ import_react31.default.createElement("line", {
+      x1: "16.24",
+      y1: "16.24",
+      x2: "19.07",
+      y2: "19.07"
+    }), /* @__PURE__ */ import_react31.default.createElement("line", {
+      x1: "2",
+      y1: "12",
+      x2: "6",
+      y2: "12"
+    }), /* @__PURE__ */ import_react31.default.createElement("line", {
+      x1: "18",
+      y1: "12",
+      x2: "22",
+      y2: "12"
+    }), /* @__PURE__ */ import_react31.default.createElement("line", {
+      x1: "4.93",
+      y1: "19.07",
+      x2: "7.76",
+      y2: "16.24"
+    }), /* @__PURE__ */ import_react31.default.createElement("line", {
+      x1: "16.24",
+      y1: "7.76",
+      x2: "19.07",
+      y2: "4.93"
+    }));
+  });
+  Loader.propTypes = {
+    color: import_prop_types3.default.string,
+    size: import_prop_types3.default.oneOfType([import_prop_types3.default.string, import_prop_types3.default.number])
+  };
+  Loader.displayName = "Loader";
+  var loader_default = Loader;
+
+  // node_modules/react-feather/dist/icons/search.js
+  var import_react32 = __toESM(require_react());
+  var import_prop_types4 = __toESM(require_prop_types());
+  function _extends3() {
+    _extends3 = Object.assign || function(target) {
+      for (var i5 = 1; i5 < arguments.length; i5++) {
+        var source = arguments[i5];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    return _extends3.apply(this, arguments);
+  }
+  function _objectWithoutProperties3(source, excluded) {
+    if (source == null)
+      return {};
+    var target = _objectWithoutPropertiesLoose3(source, excluded);
+    var key, i5;
+    if (Object.getOwnPropertySymbols) {
+      var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+      for (i5 = 0; i5 < sourceSymbolKeys.length; i5++) {
+        key = sourceSymbolKeys[i5];
+        if (excluded.indexOf(key) >= 0)
+          continue;
+        if (!Object.prototype.propertyIsEnumerable.call(source, key))
+          continue;
+        target[key] = source[key];
+      }
+    }
+    return target;
+  }
+  function _objectWithoutPropertiesLoose3(source, excluded) {
+    if (source == null)
+      return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i5;
+    for (i5 = 0; i5 < sourceKeys.length; i5++) {
+      key = sourceKeys[i5];
+      if (excluded.indexOf(key) >= 0)
+        continue;
+      target[key] = source[key];
+    }
+    return target;
+  }
+  var Search = (0, import_react32.forwardRef)(function(_ref, ref) {
+    var _ref$color = _ref.color, color = _ref$color === void 0 ? "currentColor" : _ref$color, _ref$size = _ref.size, size = _ref$size === void 0 ? 24 : _ref$size, rest = _objectWithoutProperties3(_ref, ["color", "size"]);
+    return /* @__PURE__ */ import_react32.default.createElement("svg", _extends3({
+      ref,
+      xmlns: "http://www.w3.org/2000/svg",
+      width: size,
+      height: size,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: color,
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }, rest), /* @__PURE__ */ import_react32.default.createElement("circle", {
       cx: "11",
       cy: "11",
       r: "8"
-    }), /* @__PURE__ */ import_react31.default.createElement("line", {
+    }), /* @__PURE__ */ import_react32.default.createElement("line", {
       x1: "21",
       y1: "21",
       x2: "16.65",
@@ -28065,57 +28145,119 @@
     }));
   });
   Search.propTypes = {
-    color: import_prop_types3.default.string,
-    size: import_prop_types3.default.oneOfType([import_prop_types3.default.string, import_prop_types3.default.number])
+    color: import_prop_types4.default.string,
+    size: import_prop_types4.default.oneOfType([import_prop_types4.default.string, import_prop_types4.default.number])
   };
   Search.displayName = "Search";
   var search_default = Search;
 
   // src/SearchResultsDialog.jsx
-  var import_react32 = __toESM(require_react());
+  var import_react33 = __toESM(require_react());
   var import_react_draggable3 = __toESM(require_cjs());
   function SearchResultsDialog({ isOpen, close, data }) {
     if (!data)
       return null;
-    return /* @__PURE__ */ import_react32.default.createElement(
+    return /* @__PURE__ */ import_react33.default.createElement(
       _t,
       {
         open: isOpen,
         className: "relative z-50",
-        onClose: () => {
-        }
+        onClose: close
       },
-      /* @__PURE__ */ import_react32.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react32.default.createElement(_t.Panel, { className: "w-full max-w-4xl rounded-xl bg-comfy-light px-4 relative" }, /* @__PURE__ */ import_react32.default.createElement(
+      /* @__PURE__ */ import_react33.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react33.default.createElement(_t.Panel, { className: "w-full max-w-4xl rounded-xl bg-comfy-light px-4 relative" }, /* @__PURE__ */ import_react33.default.createElement(
         "span",
         {
           className: "font-semibold absolute top-0 left-0 m-4 cursor-pointer",
           onClick: close
         },
         "X"
-      ), /* @__PURE__ */ import_react32.default.createElement(_t.Title, { className: "flex flex-row justify-center" }, "Search Results"), /* @__PURE__ */ import_react32.default.createElement("div", { className: "flex flex-col max-h-96 overflow-y-auto space-y-2 p-2 " }, data.items.map(
-        (item) => /* @__PURE__ */ import_react32.default.createElement("a", { className: "flex flex-col space-y-2 hover:bg-gray-500 text-white no-underline p-2 rounded", href: `https://openart.ai/workflows/${item.id}`, target: "_blank", key: item.id }, /* @__PURE__ */ import_react32.default.createElement("span", { className: "text-2xl" }, item.name), /* @__PURE__ */ import_react32.default.createElement("div", { className: "p-2 border rounded text-xs", dangerouslySetInnerHTML: { __html: item.description } }), /* @__PURE__ */ import_react32.default.createElement("hr", { className: "w-full" }))
-      ))))
+      ), /* @__PURE__ */ import_react33.default.createElement(_t.Title, { className: "flex flex-row justify-center" }, "Search Results"), /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col max-h-96 overflow-y-auto space-y-2 p-2 " }, data.items.map(
+        (item) => /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col" }, /* @__PURE__ */ import_react33.default.createElement(
+          "div",
+          {
+            className: "flex flex-row space-y-2 justify-between space-x-2 items-center p-2 rounded",
+            key: item.id
+          },
+          /* @__PURE__ */ import_react33.default.createElement("div", { className: "w-32 h-32 relative flex-grow" }, /* @__PURE__ */ import_react33.default.createElement(
+            "img",
+            {
+              className: "object-cover absolute w-32 h-32 rounded",
+              src: item.thumbnails[0].url
+            }
+          )),
+          /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col w-4/5" }, /* @__PURE__ */ import_react33.default.createElement("span", { className: "text-2xl" }, item.name), /* @__PURE__ */ import_react33.default.createElement(
+            "div",
+            {
+              className: "p-2 border rounded text-xs"
+            },
+            item.description.replace(/<[^>]*>?/gm, "").substring(0, 512)
+          ))
+        ), /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-row w-full justify-end space-x-2 items-center" }, /* @__PURE__ */ import_react33.default.createElement(
+          "a",
+          {
+            className: "text-white no-underline px-2 ring-0 outline-none focus:outline-none",
+            href: `https://openart.ai/workflows/${item.id}`,
+            target: "_blank"
+          },
+          /* @__PURE__ */ import_react33.default.createElement(external_link_default, null),
+          " "
+        ), /* @__PURE__ */ import_react33.default.createElement(
+          "div",
+          {
+            onClick: (e4) => {
+              e4.target.classList.add("animate-pulse");
+              e4.target.innerHTML = "Loading...";
+              e4.target.disabled = true;
+              fetch(
+                "https://openart.ai/api/public/workflows/download",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify({
+                    workflow_id: item.id
+                  })
+                }
+              ).catch(() => {
+                alert("Error loading workflow");
+                e4.target.classList.remove("animate-pulse");
+                e4.target.disabled = false;
+                e4.target.innerHTML = "Use workflow";
+              }).then((res) => res.json()).then((res) => {
+                e4.target.classList.remove("animate-pulse");
+                e4.target.disabled = false;
+                e4.target.innerHTML = "Use workflow";
+                app.loadGraphData(JSON.parse(res.payload));
+                close();
+              });
+            },
+            className: "bg-comfy-dark p-2 rounded text-white text-lg font-semibold cursor-pointer"
+          },
+          "Use workflow"
+        )), /* @__PURE__ */ import_react33.default.createElement("hr", { className: "w-full" }))
+      ), data.items.length === 0 && /* @__PURE__ */ import_react33.default.createElement("div", { className: "text-center text-2xl" }, "No results found"))))
     );
   }
   var SearchResultsDialog_default = SearchResultsDialog;
 
   // src/SearchComponent.jsx
   function SearchComponent() {
-    const [searching, setSearching] = (0, import_react34.useState)(false);
-    const [loading, setLoading] = (0, import_react34.useState)(false);
-    const input = (0, import_react34.useRef)(null);
-    const [text, setText] = (0, import_react34.useState)("");
-    const [data, setData] = (0, import_react34.useState)(null);
+    const [searching, setSearching] = (0, import_react35.useState)(false);
+    const [loading, setLoading] = (0, import_react35.useState)(false);
+    const input = (0, import_react35.useRef)(null);
+    const [text, setText] = (0, import_react35.useState)("");
+    const [data, setData] = (0, import_react35.useState)(null);
     const search = () => {
       setLoading(true);
-      fetch(`https://openart.ai/api/workflows/list?query_type=workflow&keyword=${text}`).then((res) => res.json()).then((results) => {
+      fetch(`https://openart.ai/api/workflows/list?query_type=workflow&keyword=${text}&pagesSize=25`).then((res) => res.json()).then((results) => {
         setLoading(false);
         setData(results);
         setSearching(false);
         setText("");
       });
     };
-    return /* @__PURE__ */ import_react34.default.createElement(import_react34.default.Fragment, null, /* @__PURE__ */ import_react34.default.createElement("div", { className: "bottom-4 fixed w-full flex justify-center" }, /* @__PURE__ */ import_react34.default.createElement("div", { className: "w-full max-w-5xl flex" }, /* @__PURE__ */ import_react34.default.createElement(
+    return /* @__PURE__ */ import_react35.default.createElement(import_react35.default.Fragment, null, /* @__PURE__ */ import_react35.default.createElement("div", { className: "bottom-4 fixed w-full flex justify-center p-2" }, /* @__PURE__ */ import_react35.default.createElement("div", { className: "w-full max-w-5xl flex" }, /* @__PURE__ */ import_react35.default.createElement(
       "div",
       {
         onClick: () => {
@@ -28131,16 +28273,16 @@
         },
         className: `bg-white ${searching ? "w-full" : "w-10 h-10"} rounded-full items-center  cursor-pointer flex  flex-row space-x-2 transition-width duration-300 ease-in-out`
       },
-      /* @__PURE__ */ import_react34.default.createElement(
+      /* @__PURE__ */ import_react35.default.createElement(
         "div",
         {
           onClick: () => searching && setSearching(false),
           onKeyDown: (e4) => e4.key === "Escape" && setSearching(false),
           className: "flex items-center justify-center w-10 h-10"
         },
-        loading ? /* @__PURE__ */ import_react34.default.createElement(loader_default, { className: "text-black animate-spin" }) : /* @__PURE__ */ import_react34.default.createElement(search_default, { className: "text-black" })
+        loading ? /* @__PURE__ */ import_react35.default.createElement(loader_default, { className: "text-black animate-spin" }) : /* @__PURE__ */ import_react35.default.createElement(search_default, { className: "text-black" })
       ),
-      searching && /* @__PURE__ */ import_react34.default.createElement(
+      searching && /* @__PURE__ */ import_react35.default.createElement(
         "input",
         {
           ref: input,
@@ -28156,19 +28298,19 @@
           type: "text"
         }
       )
-    ))), /* @__PURE__ */ import_react34.default.createElement(SearchResultsDialog_default, { isOpen: data != null, close: () => setData(null), data }));
+    ))), /* @__PURE__ */ import_react35.default.createElement(SearchResultsDialog_default, { isOpen: data != null, close: () => setData(null), data }));
   }
   var SearchComponent_default = SearchComponent;
 
   // src/ComfyAssistantOverlay.jsx
   var ComfyAssistantOverlay = () => {
-    const [isOpen, setIsOpen] = (0, import_react35.useState)(false);
-    const [video, setVideo] = (0, import_react35.useState)(null);
+    const [isOpen, setIsOpen] = (0, import_react36.useState)(false);
+    const [video, setVideo] = (0, import_react36.useState)(null);
     window.onLearnClick = () => {
       setIsOpen(true);
       setVideo(null);
     };
-    return /* @__PURE__ */ import_react35.default.createElement(import_react35.default.Fragment, null, /* @__PURE__ */ import_react35.default.createElement(
+    return /* @__PURE__ */ import_react36.default.createElement(import_react36.default.Fragment, null, /* @__PURE__ */ import_react36.default.createElement(
       _t,
       {
         open: isOpen,
@@ -28176,12 +28318,12 @@
         onClose: () => {
         }
       },
-      !video && /* @__PURE__ */ import_react35.default.createElement(LearnDialog_default, { close: () => setIsOpen(false), startVideo: (video2) => setVideo(video2) }),
-      video && /* @__PURE__ */ import_react35.default.createElement(YoutubePlayer_default, { videoId: "BT2Kpm1cU-w", close: () => {
+      !video && /* @__PURE__ */ import_react36.default.createElement(LearnDialog_default, { close: () => setIsOpen(false), startVideo: (video2) => setVideo(video2) }),
+      video && /* @__PURE__ */ import_react36.default.createElement(YoutubePlayer_default, { videoId: "BT2Kpm1cU-w", close: () => {
         setIsOpen(false);
         setVideo(null);
       }, video })
-    ), /* @__PURE__ */ import_react35.default.createElement(SearchComponent_default, null));
+    ), /* @__PURE__ */ import_react36.default.createElement(SearchComponent_default, null));
   };
   var ComfyAssistantOverlay_default = ComfyAssistantOverlay;
 
@@ -28189,7 +28331,7 @@
   var rootDomNode = document.createElement("div");
   document.body.appendChild(rootDomNode);
   var root = ReactDOM.createRoot(rootDomNode);
-  root.render(/* @__PURE__ */ React9.createElement(ComfyAssistantOverlay_default, null));
+  root.render(/* @__PURE__ */ React10.createElement(ComfyAssistantOverlay_default, null));
 })();
 /*! Bundled license information:
 

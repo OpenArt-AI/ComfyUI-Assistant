@@ -176,6 +176,18 @@ docStyle.innerHTML = `*, ::before, ::after {
   height: 2.5rem
 }
 
+.h-96 {
+  height: 24rem
+}
+
+.h-32 {
+  height: 8rem
+}
+
+.h-full {
+  height: 100%
+}
+
 .max-h-96 {
   max-height: 24rem
 }
@@ -225,6 +237,22 @@ docStyle.innerHTML = `*, ::before, ::after {
   width: 3rem
 }
 
+.w-96 {
+  width: 24rem
+}
+
+.w-32 {
+  width: 8rem
+}
+
+.w-1\\/2 {
+  width: 50%
+}
+
+.w-4\\/5 {
+  width: 80%
+}
+
 .max-w-4xl {
   max-width: 56rem
 }
@@ -235,6 +263,14 @@ docStyle.innerHTML = `*, ::before, ::after {
 
 .max-w-5xl {
   max-width: 64rem
+}
+
+.max-w-full {
+  max-width: 100%
+}
+
+.flex-shrink {
+  flex-shrink: 1
 }
 
 .flex-grow {
@@ -251,6 +287,16 @@ docStyle.innerHTML = `*, ::before, ::after {
   animation: spin 1s linear infinite
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite
+}
+
 .cursor-pointer {
   cursor: pointer
 }
@@ -265,6 +311,10 @@ docStyle.innerHTML = `*, ::before, ::after {
 
 .items-center {
   align-items: center
+}
+
+.justify-end {
+  justify-content: flex-end
 }
 
 .justify-center {
@@ -393,6 +443,11 @@ docStyle.innerHTML = `*, ::before, ::after {
   line-height: 1.75rem
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
 .font-semibold {
   font-weight: 600
 }
@@ -441,6 +496,11 @@ docStyle.innerHTML = `*, ::before, ::after {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+}
+
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
 .filter {
@@ -498,6 +558,11 @@ docStyle.innerHTML = `*, ::before, ::after {
 .hover\\:bg-gray-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity))
+}
+
+.focus\\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px
 }
 `;
 document.head.appendChild(docStyle);
