@@ -27489,6 +27489,13 @@
         onClick: close
       },
       "X"
+    ), /* @__PURE__ */ import_react25.default.createElement(
+      "a",
+      {
+        className: "text-lg p-2 rounded no-underline absolute top-0 right-0 m-4 text-white",
+        href: "https://github.com/OpenArt-AI/ComfyUI-Assistant/issues/new"
+      },
+      "Send Feedback"
     ), /* @__PURE__ */ import_react25.default.createElement(_t.Title, { className: "flex flex-row justify-center" }, "Comfy Assistant ", /* @__PURE__ */ import_react25.default.createElement(
       "span",
       {
@@ -28164,79 +28171,95 @@
         className: "relative z-50",
         onClose: close
       },
-      /* @__PURE__ */ import_react33.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react33.default.createElement(_t.Panel, { className: "w-full max-w-4xl rounded-xl  border-white border-solid border-2 bg-comfy-light px-4 relative" }, /* @__PURE__ */ import_react33.default.createElement(
-        "span",
+      /* @__PURE__ */ import_react33.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react33.default.createElement(
+        _t.Panel,
         {
-          className: "font-semibold absolute top-0 left-0 m-4 cursor-pointer",
-          onClick: close
+          className: "w-full max-w-4xl rounded-xl  border-white border-solid border-2 bg-comfy-light px-4 relative"
         },
-        "X"
-      ), /* @__PURE__ */ import_react33.default.createElement(_t.Title, { className: "flex flex-row justify-center" }, "Search Results"), /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col max-h-96 overflow-y-auto space-y-2 p-2 " }, data.items.map(
-        (item) => /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col" }, /* @__PURE__ */ import_react33.default.createElement(
-          "div",
+        /* @__PURE__ */ import_react33.default.createElement(
+          "span",
           {
-            className: "flex flex-row space-y-2 justify-between space-x-2 items-center p-2 rounded",
-            key: item.id
+            className: "font-semibold absolute top-0 left-0 m-4 cursor-pointer",
+            onClick: close
           },
-          /* @__PURE__ */ import_react33.default.createElement("div", { className: "w-32 h-32 relative flex-grow" }, /* @__PURE__ */ import_react33.default.createElement(
-            "img",
-            {
-              className: "object-cover absolute w-32 h-32 rounded",
-              src: item.thumbnails[0].url
-            }
-          )),
-          /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col w-4/5" }, /* @__PURE__ */ import_react33.default.createElement("span", { className: "text-2xl" }, item.name), /* @__PURE__ */ import_react33.default.createElement(
-            "div",
-            {
-              className: "p-2 border rounded text-xs"
-            },
-            item.description.replace(/<[^>]*>?/gm, "").substring(0, 512)
-          ))
-        ), /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-row w-full justify-end space-x-2 items-center" }, /* @__PURE__ */ import_react33.default.createElement(
+          "X"
+        ),
+        /* @__PURE__ */ import_react33.default.createElement(_t.Title, { className: "flex flex-row justify-center" }, "Search Results"),
+        /* @__PURE__ */ import_react33.default.createElement(
           "a",
           {
-            className: "text-white no-underline px-2 ring-0 outline-none focus:outline-none",
-            href: `https://openart.ai/workflows/${item.id}`,
-            target: "_blank"
+            className: "text-lg p-2 rounded no-underline absolute top-0 right-0 m-4 text-white",
+            href: "https://github.com/OpenArt-AI/ComfyUI-Assistant/issues/new"
           },
-          /* @__PURE__ */ import_react33.default.createElement(external_link_default, null),
-          " "
-        ), /* @__PURE__ */ import_react33.default.createElement(
-          "div",
-          {
-            onClick: (e4) => {
-              e4.target.classList.add("animate-pulse");
-              e4.target.innerHTML = "Loading...";
-              e4.target.disabled = true;
-              fetch(
-                "https://openart.ai/api/public/workflows/download",
-                {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json"
-                  },
-                  body: JSON.stringify({
-                    workflow_id: item.id
-                  })
-                }
-              ).catch(() => {
-                alert("Error loading workflow");
-                e4.target.classList.remove("animate-pulse");
-                e4.target.disabled = false;
-                e4.target.innerHTML = "Use workflow";
-              }).then((res) => res.json()).then((res) => {
-                e4.target.classList.remove("animate-pulse");
-                e4.target.disabled = false;
-                e4.target.innerHTML = "Use workflow";
-                app.loadGraphData(JSON.parse(res.payload));
-                close();
-              });
+          "Send Feedback"
+        ),
+        /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col overflow-y-auto space-y-2 p-2 max-h-96" }, data.items.map(
+          (item) => /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col" }, /* @__PURE__ */ import_react33.default.createElement(
+            "div",
+            {
+              className: "flex flex-row space-y-2 justify-between space-x-2 items-center p-2 rounded",
+              key: item.id
             },
-            className: "bg-comfy-dark p-2 rounded text-white text-lg font-semibold cursor-pointer"
-          },
-          "Use workflow"
-        )), /* @__PURE__ */ import_react33.default.createElement("hr", { className: "w-full" }))
-      ), data.items.length === 0 && /* @__PURE__ */ import_react33.default.createElement("div", { className: "text-center text-2xl" }, "No results found"))))
+            /* @__PURE__ */ import_react33.default.createElement("div", { className: "w-32 h-32 relative flex-grow" }, /* @__PURE__ */ import_react33.default.createElement(
+              "img",
+              {
+                className: "object-cover absolute w-32 h-32 rounded",
+                src: item.thumbnails[0].url
+              }
+            )),
+            /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-col w-4/5" }, /* @__PURE__ */ import_react33.default.createElement("span", { className: "text-2xl" }, item.name), /* @__PURE__ */ import_react33.default.createElement(
+              "div",
+              {
+                className: "p-2 border rounded text-xs"
+              },
+              item.description.replace(/<[^>]*>?/gm, "").substring(0, 512)
+            ))
+          ), /* @__PURE__ */ import_react33.default.createElement("div", { className: "flex flex-row w-full justify-end space-x-2 items-center" }, /* @__PURE__ */ import_react33.default.createElement(
+            "a",
+            {
+              className: "text-white no-underline px-2 ring-0 outline-none focus:outline-none",
+              href: `https://openart.ai/workflows/${item.id}`,
+              target: "_blank"
+            },
+            /* @__PURE__ */ import_react33.default.createElement(external_link_default, null),
+            " "
+          ), /* @__PURE__ */ import_react33.default.createElement(
+            "div",
+            {
+              onClick: (e4) => {
+                e4.target.classList.add("animate-pulse");
+                e4.target.innerHTML = "Loading...";
+                e4.target.disabled = true;
+                fetch(
+                  "https://openart.ai/api/public/workflows/download",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                      workflow_id: item.id
+                    })
+                  }
+                ).catch(() => {
+                  alert("Error loading workflow");
+                  e4.target.classList.remove("animate-pulse");
+                  e4.target.disabled = false;
+                  e4.target.innerHTML = "Use workflow";
+                }).then((res) => res.json()).then((res) => {
+                  e4.target.classList.remove("animate-pulse");
+                  e4.target.disabled = false;
+                  e4.target.innerHTML = "Use workflow";
+                  app.loadGraphData(JSON.parse(res.payload));
+                  close();
+                });
+              },
+              className: "bg-comfy-dark p-2 rounded text-white text-lg font-semibold cursor-pointer"
+            },
+            "Use workflow"
+          )), /* @__PURE__ */ import_react33.default.createElement("hr", { className: "w-full" }))
+        ), data.items.length === 0 && /* @__PURE__ */ import_react33.default.createElement("div", { className: "text-center text-2xl" }, "No results found"))
+      ))
     );
   }
   var SearchResultsDialog_default = SearchResultsDialog;

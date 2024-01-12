@@ -120,8 +120,8 @@ docStyle.innerHTML = `*, ::before, ::after {
   inset: 0px
 }
 
-.bottom-3 {
-  bottom: 0.75rem
+.bottom-4 {
+  bottom: 1rem
 }
 
 .left-0 {
@@ -134,14 +134,6 @@ docStyle.innerHTML = `*, ::before, ::after {
 
 .right-0 {
   right: 0px
-}
-
-.bottom-6 {
-  bottom: 1.5rem
-}
-
-.bottom-4 {
-  bottom: 1rem
 }
 
 .z-50 {
@@ -160,40 +152,36 @@ docStyle.innerHTML = `*, ::before, ::after {
   display: none
 }
 
-.h-8 {
-  height: 2rem
-}
-
-.h-6 {
-  height: 1.5rem
-}
-
-.h-12 {
-  height: 3rem
-}
-
 .h-10 {
   height: 2.5rem
-}
-
-.h-96 {
-  height: 24rem
 }
 
 .h-32 {
   height: 8rem
 }
 
-.h-full {
-  height: 100%
+.h-8 {
+  height: 2rem
 }
 
 .max-h-96 {
   max-height: 24rem
 }
 
+.w-10 {
+  width: 2.5rem
+}
+
 .w-14 {
   width: 3.5rem
+}
+
+.w-32 {
+  width: 8rem
+}
+
+.w-4\\/5 {
+  width: 80%
 }
 
 .w-fit {
@@ -209,82 +197,16 @@ docStyle.innerHTML = `*, ::before, ::after {
   width: 100vw
 }
 
-.w-16 {
-  width: 4rem
-}
-
-.w-10 {
-  width: 2.5rem
-}
-
-.w-8 {
-  width: 2rem
-}
-
-.w-1 {
-  width: 0.25rem
-}
-
-.w-6 {
-  width: 1.5rem
-}
-
-.w-7 {
-  width: 1.75rem
-}
-
-.w-12 {
-  width: 3rem
-}
-
-.w-96 {
-  width: 24rem
-}
-
-.w-32 {
-  width: 8rem
-}
-
-.w-1\\/2 {
-  width: 50%
-}
-
-.w-4\\/5 {
-  width: 80%
-}
-
 .max-w-4xl {
   max-width: 56rem
-}
-
-.max-w-7xl {
-  max-width: 80rem
 }
 
 .max-w-5xl {
   max-width: 64rem
 }
 
-.max-w-full {
-  max-width: 100%
-}
-
-.flex-shrink {
-  flex-shrink: 1
-}
-
 .flex-grow {
   flex-grow: 1
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg)
-  }
-}
-
-.animate-spin {
-  animation: spin 1s linear infinite
 }
 
 @keyframes pulse {
@@ -295,6 +217,16 @@ docStyle.innerHTML = `*, ::before, ::after {
 
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite
 }
 
 .cursor-pointer {
@@ -345,16 +277,16 @@ docStyle.innerHTML = `*, ::before, ::after {
   overflow-y: auto
 }
 
-.rounded-xl {
-  border-radius: 0.75rem
+.rounded {
+  border-radius: 0.25rem
 }
 
 .rounded-full {
   border-radius: 9999px
 }
 
-.rounded {
-  border-radius: 0.25rem
+.rounded-xl {
+  border-radius: 0.75rem
 }
 
 .rounded-t-xl {
@@ -383,6 +315,11 @@ docStyle.innerHTML = `*, ::before, ::after {
   border-color: rgb(255 255 255 / var(--tw-border-opacity))
 }
 
+.bg-comfy-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 34 34 / var(--tw-bg-opacity))
+}
+
 .bg-comfy-light {
   --tw-bg-opacity: 1;
   background-color: rgb(53 53 53 / var(--tw-bg-opacity))
@@ -396,11 +333,6 @@ docStyle.innerHTML = `*, ::before, ::after {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-}
-
-.bg-comfy-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 34 34 / var(--tw-bg-opacity))
 }
 
 .object-cover {
@@ -441,14 +373,14 @@ docStyle.innerHTML = `*, ::before, ::after {
   line-height: 2rem
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem
 }
 
 .text-xl {
@@ -456,23 +388,23 @@ docStyle.innerHTML = `*, ::before, ::after {
   line-height: 1.75rem
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem
 }
 
 .font-semibold {
   font-weight: 600
 }
 
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity))
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity))
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity))
 }
 
 .text-white {
@@ -488,21 +420,9 @@ docStyle.innerHTML = `*, ::before, ::after {
   text-decoration-line: none
 }
 
-.opacity-0 {
-  opacity: 0
-}
-
-.opacity-100 {
-  opacity: 1
-}
-
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px
-}
-
-.outline-0 {
-  outline-width: 0px
 }
 
 .ring-0 {
@@ -511,33 +431,8 @@ docStyle.innerHTML = `*, ::before, ::after {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
 }
 
-.blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
-}
-
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
-}
-
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms
-}
-
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms
 }
 
 .duration-300 {
