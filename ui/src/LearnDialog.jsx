@@ -1,23 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Dialog} from "@headlessui/react";
 import logo from "./logo.png";
 import Draggable from "react-draggable";
 import {Loader} from "react-feather";
-//             moduleItem.querySelector('button').addEventListener('click', () => {
-//                 LearnModal.get().close()
-//                 if(module.initialWorkflow){
-//                     app.loadGraphData(JSON.parse(module.initialWorkflow))
-//                 }
-//                 if(module.type === 'lesson') {
-//                     const keyframesFunctions = {}
-//                     if(module.keyframesWorkflows){
-//                         for (let keyframe in module.keyframesWorkflows) {
-//                             const parsedWorkflow = JSON.parse(module.keyframesWorkflows[keyframe])
-//                             keyframesFunctions[keyframe] = ()=> app.loadGraphData(parsedWorkflow);
-//                         }
-//                     }
-//                     startVideo(module.title,module.videoId,keyframesFunctions)
-//                 }
+import {categories} from "../../javascript/data";
+
 function LearnDialog({close, startVideo}) {
     const [selectedCategory,setSelectedCategory] = useState(window.data.categories[0])
     const [loading,setLoading] = useState(false)

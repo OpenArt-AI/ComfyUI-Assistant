@@ -194,3 +194,20 @@ export const modules = [
 
     }))
 ]
+
+fetch("https://openart.ai/api/public/templates/list").then(res=>res.json()).then(res=>{
+
+    res.map(template => {
+            const t = ({
+                id: template.id,
+                title: template.name,
+                description: template.description,
+                type: 'template',
+                thumbnail: template.thumbnails[0].url,
+                categories: [categories[1]],
+            })
+        if(!modules.find(m=>m.id===t.id)){
+            modules.push(t)
+        }
+        }
+    )})
