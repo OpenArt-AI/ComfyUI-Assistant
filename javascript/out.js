@@ -27947,23 +27947,28 @@
       categories: [categories[1]]
     }))
   ];
-
-  // src/LearnDialog.jsx
-  function LearnDialog({ close, startVideo }) {
-    const [selectedCategory, setSelectedCategory] = (0, import_react28.useState)(window.data.categories[0]);
-    const [loading, setLoading] = (0, import_react28.useState)(false);
-    (0, import_react28.useEffect)(() => {
-      fetch("https://openart.ai/api/public/templates/list").then((res) => res.json()).then((res) => {
-        res.map((template) => ({
+  fetch("https://openart.ai/api/public/templates/list").then((res) => res.json()).then((res) => {
+    res.map(
+      (template) => {
+        const t15 = {
           id: template.id,
           title: template.name,
           description: template.description,
           type: "template",
           thumbnail: template.thumbnails[0].url,
           categories: [categories[1]]
-        }));
-      });
-    }, []);
+        };
+        if (!modules.find((m8) => m8.id === t15.id)) {
+          modules.push(t15);
+        }
+      }
+    );
+  });
+
+  // src/LearnDialog.jsx
+  function LearnDialog({ close, startVideo }) {
+    const [selectedCategory, setSelectedCategory] = (0, import_react28.useState)(window.data.categories[0]);
+    const [loading, setLoading] = (0, import_react28.useState)(false);
     return /* @__PURE__ */ import_react28.default.createElement(import_react_draggable.default, null, /* @__PURE__ */ import_react28.default.createElement("div", { className: "fixed inset-0 flex w-screen items-center justify-center p-2" }, /* @__PURE__ */ import_react28.default.createElement(_t.Panel, { className: "w-full max-w-4xl rounded-xl bg-comfy-light px-4 relative" }, /* @__PURE__ */ import_react28.default.createElement(
       "span",
       {
