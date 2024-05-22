@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-assistant"
+description = "ComfyUI Assistant is your one stop plugin for everything you need to get started with comfy-ui. Now it provides useful courses, tutorials, and basic templates."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["requests~=2.31.0"]
+
+[project.urls]
+Repository = "https://github.com/OpenArt-AI/ComfyUI-Assistant"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Assistant"
+Icon = ""
